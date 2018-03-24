@@ -151,12 +151,29 @@
     top: 0;
     width: 100vw;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 #container {
+    background-color: #333;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    margin: auto;
+    display: -webkit-flex;
+    border-top-color: #67b6ff;
+    border-top-style: groove;
+    border-top-width: 5px;
+    border-bottom-color: #67b6ff;
+    border-bottom-style: groove;
+    border-bottom-width: 5px;
+    box-shadow: 
+      0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+#container > div {
     position: relative;
-    background-color: black;
+    background-color: #555;
     margin: auto;
     padding: 20px;
 }

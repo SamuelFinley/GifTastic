@@ -29,7 +29,6 @@ $(document).ready(() => {
               $(this.childNodes[3]).attr("src", this.childNodes[3].alt);
             },
             function() {
-              //console.log(this.value);
               $(this.childNodes[3]).attr("src", this.value);
             }                         
         );                  
