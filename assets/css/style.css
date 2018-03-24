@@ -1,42 +1,98 @@
 .topic {
-    border-radius: 10%;
-    background-color: #1404ff;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
+    border-radius: 25px;
+    background-color: #444;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
     font-weight: bold;
-    text-align: center;
-    margin-left: 10px;
-    margin-right: 10px;
+    display: -webkit-flex;
+    flex-direction: row;
+    margin-left: 15px;
+    margin-right: 15px;
     margin-top: 5px;
     margin-bottom: 5px;
+    color: #dddddd;
 }
+.gifArea {
+    display: -webkit-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#topicB {
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+    text-decoration: none;
+    text-align: center;
+    color: #dddddd;
+    margin: auto;
+    background-color: transparent;
+}
+
+#topicInput {
+    border-color: #67b6ff;
+    border-style: solid;
+    border-width: 2px;
+}
+
 .gif {
     margin-left: 10px;
     margin-right: 10px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 2%;
+    border-color: #67b6ff;
+    color: #dddddd;
+    border-style: solid;
+    border-width: 1px;
 }
+
 .topicArea {
     display: -webkit-flex;
     flex-direction: row;
     justify-content: flex-start;
+    width: 100vw;
     flex-wrap: wrap;
 }
 #nameBox {
-    font-size: xx-large;
-    background-color: #4aaaa5;
-    color: #ffffff;
+    font-size: 3em;
+    color: #67b6ff;
     padding: 24px;
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
     font-weight: bold;
+    text-shadow: 
+      0 -1px 0 #fff, 
+      0 1px 0 #2e2e2e, 
+      0 2px 0 #2c2c2c, 
+      0 3px 0 #2a2a2a, 
+      0 4px 0 #282828, 
+      0 5px 0 #262626, 
+      0 6px 0 #242424, 
+      0 7px 0 #222, 
+      0 8px 0 #202020, 
+      0 9px 0 #1e1e1e, 
+      0 10px 0 #1c1c1c, 
+      0 11px 0 #1a1a1a, 
+      0 12px 0 #181818, 
+      0 13px 0 #161616, 
+      0 22px 30px rgba(0, 0, 0, 0.9);
 }
 
-#mainContent  p {
-    padding-top: 25px;
-    font-family: sans-serif;
-    line-height: 2;
-    color: #777777;
+#mainContent > h1 {
+    margin: auto;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+    background-color: #565656;
+    color: transparent;
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.5);
+    -webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
 }
 
 #mainContent, .sidebar {
@@ -44,16 +100,42 @@
     border-width: 1px;
     border-color: #cccccc;
 }
-
+#container {
+    position: relative;
+    background-color: black;
+    margin: auto;
+    padding: 20px;
+}
+#alt {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#pic1 {
+    margin: auto;
+    background-color: black;
+}
+#close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: transparent;
+    color: #dddddd;
+    border: none;
+}
 #mainContent {
-    width: 600px;
+    width: 80vw;
+    display: -webkit-flex;
     flex: none;
-    margin-right: 40px;
     background-color: #ffffff;
     border-color: #dddddd;
-    order: 1;
     font-size: 12pt;
-    padding: 25px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 112px;
 }
 
@@ -68,7 +150,7 @@
 #bio, .banner, .sidebar > h1 {
     border-bottom-style: solid;
     border-bottom-width: 2px;
-    border-color: #cccccc;
+    border-color: #67b6ff;
 }
 
 #bio {
@@ -118,7 +200,7 @@
 }
 
 .app {
-    background-image: url("../images/restaurant_icons.png");
+    background-image: url("../images/topography.png");
     position: relative;
     min-height: 100vh;
     overflow-x: hidden;
@@ -127,9 +209,14 @@
     width: 100vw;
 }
 
-
+#banner2 {
+    background-color: #333;
+    box-shadow: 
+      0 0 10px rgba(0, 0, 0, 0.9);
+}
 .banner {
-    background-color: #666666;
+    background-color: #67b6ff;
+    flex-wrap: wrap;
 }
 
 .top {
@@ -138,7 +225,12 @@
     margin-right: auto;
     max-width: 960px;
 }
-
+.top > form {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    text-align: center;
+}
 .sidebar {
     order: 2;
     background-color: #ffffff; 
@@ -187,13 +279,22 @@
     padding-bottom: 25px;
 }
 
+#remove {
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    margin: auto;
+    color: #dddddd;
+    background-color: transparent;
+}
+
 .content {
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
+    min-height: 80vh;
     display: -webkit-flex;
     flex-direction: row;
-    max-width: 960px;
 }
 
 .footer {
@@ -204,11 +305,11 @@
     padding-left: 0;
     font-size: small;
     text-align: center;
-    color: #ffffff;
-    background-color: #666666;
+    color: #67b6ff;
+    background-color: #333;
     border-top-style: solid;
     border-top-width: 10px;
-    border-color: #4aaaa5;
+    border-color: #67b6ff;
   }
 
   /* Media queries */

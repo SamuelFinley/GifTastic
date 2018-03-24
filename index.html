@@ -13,35 +13,34 @@
   </head>
   <body class="app">
     <div class="banner">
+        <div id="banner2">
         <div class="top">
             <h1 id="nameBox">
-                GifTastic
+                Gif-Tastic
             </h1>
+            <form>
+                <input id="topicInput" type="text" name="topic" placeholder="Search">
+                <input id="submit" type="button" value="Submit">
+            </form> 
         </div>
+        </div>
+        <div class="topicArea"></div>
+        
     </div>
         <div class="content">
-            <div id="mainContent">
-                <div class="topicArea">
-                </div>
+            <div id="mainContent"> <h1>Find Some Gifs!</h1>
                 <div class="gifArea">
                 </div>
-            </div>
-            <div class="sidebar">
-                <h1>
-                    New Topic
-                </h1>
-                <!--action="/action_page.php"-->
-                <form>
-                    Choose a topic:<br>
-                    <input id="topicInput" type="text" name="topic" value="find some gifs...">
-                    <br><br>
-                    <input id="submit" type="button" value="Submit">
-                </form> 
             </div>
         </div>
 
     <div class="footer">@ Copyright 2018 Edward Finley
     </div>
-
+    <div id="alt">
+        <div id="container">
+            <button id="close">&#x2716</button>
+            <img id="pic1" src="" alt="oops">
+        </div>
+    </div>
   </body>
 </html>
