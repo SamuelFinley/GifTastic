@@ -22,6 +22,7 @@ $(document).ready(() => {
       element.appendChild(child);
       element.onclick = function () {
         $('#alt').css('display', 'flex');
+        $('#container > h1').html('URL: ' + obj.url + '<br><br>Source URL: ' + obj.source + '<br><br>Date Uploaded: ' + obj.import_datetime + '<br><br>Rating: ' + obj.rating);
         $('#pic1').attr("src", obj.images.original.url);
       }
         $(".gif").hover(

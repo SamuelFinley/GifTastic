@@ -161,6 +161,7 @@
     width: 100%;
     margin: auto;
     display: -webkit-flex;
+    justify-content: center;
     border-top-color: #67b6ff;
     border-top-style: groove;
     border-top-width: 5px;
@@ -175,6 +176,13 @@
     position: relative;
     background-color: #555;
     margin: auto;
+    padding: 20px;
+}
+#container > h1 {
+    position: relative;
+    margin: auto;
+    background-color: #555;
+    color: #dddddd;
     padding: 20px;
 }
 
