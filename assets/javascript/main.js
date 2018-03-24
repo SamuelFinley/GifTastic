@@ -46,6 +46,7 @@ $(document).ready(() => {
       element.value = obj.value;
       child.onclick = function () {
         this.parentNode.remove();
+        delete topics[obj.value];
       }
       return {element: element, child: child, child2: child2, id: obj.value};
     }
@@ -94,6 +95,7 @@ $(document).ready(() => {
     };
     //window.localStorage.setItem('topics', JSON.stringify(topics));
     //JSON.parse(localStorage.getItem('user'));
+    //localStorage.clear();
   });
 
   $('#close').click(function () {

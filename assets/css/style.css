@@ -11,7 +11,7 @@
 .overlay {
     min-height: 100vh;
     width: 100%;
-    background-color: rgba(0,0,0, 0.5);
+    background-color: rgba(0,0,0, 0.2);
 }
 
 .banner {
@@ -26,7 +26,7 @@
       0 0 10px rgba(0, 0, 0, 0.9);
     border-bottom-style: groove;
     border-bottom-color: #67b6ff;
-    border-bottom-width: 2px
+    border-bottom-width: 3px
 }
 
 .top {
@@ -41,7 +41,8 @@
     color: #67b6ff;
     padding: 24px;
     font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
-    font-weight: bold;
+    font-weight: 600;
+    letter-spacing: .1em;
     text-shadow: 
       0 -1px 0 #fff, 
       0 1px 0 #2e2e2e, 
@@ -53,10 +54,6 @@
       0 7px 0 #222, 
       0 8px 0 #202020, 
       0 9px 0 #1e1e1e, 
-      0 10px 0 #1c1c1c, 
-      0 11px 0 #1a1a1a, 
-      0 12px 0 #181818, 
-      0 13px 0 #161616, 
       0 22px 30px rgba(0, 0, 0, 0.9);
 }
 
@@ -75,7 +72,8 @@
     display: -webkit-flex;
     flex-direction: row;
     justify-content: flex-start;
-    width: 100vw;
+    margin: auto;
+    width: 80vw;
     flex-wrap: wrap;
 }
 .content {
@@ -85,36 +83,35 @@
     min-height: 50vh;
     display: -webkit-flex;
     flex-direction: row;
+    padding-bottom: 50px;
 }
 #mainContent {
-    width: 80vw;
+    width: 980px;
     display: -webkit-flex;
     flex: none;
-    background-color: #ffffff;
+    background-color: #bbbbbb;
     border-color: #dddddd;
     font-size: 12pt;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 112px;
-    box-shadow: 
-      0 0 10px rgba(0, 0, 0, 0.6);
-}
-
-#mainContent, .sidebar {
     border-style: solid;
-    border-width: 1px;
-    border-color: #cccccc;
+    border-width: 2px;
+    border-color: #467bac;
+    box-shadow: 
+      inset 0 0 10px rgba(0, 0, 0, 0.6);
 }
 
 #mainContent > h1 {
     margin: auto;
     font-weight: bold;
+    padding: 10px;
     font-size: 3em;
     text-align: center;
-    background-color: #565656;
-    color: transparent;
     font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
-    text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.5);
+    background-color: #467bac;
+    color: transparent;
+    text-shadow: 0px 2px 3px rgba(255,255,255,0.5);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
@@ -131,14 +128,14 @@
     width: 100%;
     position: absolute;
     bottom: 0%;
-    padding: 20px;
+    padding: 15px;
     padding-left: 0;
     font-size: small;
     text-align: center;
     color: #67b6ff;
     background-color: #333;
     border-top-style: groove;
-    border-top-width: 10px;
+    border-top-width: 3px;
     border-color: #67b6ff;
     box-shadow: 
       0 0 10px rgba(0, 0, 0, 0.6);
@@ -162,10 +159,9 @@
     margin: auto;
     display: -webkit-flex;
     justify-content: center;
-    border-top-color: #67b6ff;
+    border-color: #67b6ff;
     border-top-style: groove;
     border-top-width: 5px;
-    border-bottom-color: #67b6ff;
     border-bottom-style: groove;
     border-bottom-width: 5px;
     box-shadow: 
@@ -174,14 +170,14 @@
 
 #container > div {
     position: relative;
-    background-color: #555;
+    background-color: #222;
     margin: auto;
     padding: 20px;
 }
+
 #container > h1 {
-    position: relative;
     margin: auto;
-    background-color: #555;
+    background-color: #222;
     color: #dddddd;
     padding: 20px;
 }
@@ -215,6 +211,8 @@
     margin-top: 5px;
     margin-bottom: 5px;
     color: #dddddd;
+    box-shadow: 
+        2px 2px 5px rgba(0, 0, 0, 0.6);
 }
 
 #topicB {
@@ -240,6 +238,8 @@
     color: #dddddd;
     border-style: solid;
     border-width: 1px;
+    box-shadow: 
+        4px 4px 10px rgba(0, 0, 0, 0.6);
 }
 
 #remove {
@@ -255,10 +255,23 @@
   /* Media queries */
 
 @media only screen and (min-width: 768px) and (max-width: 989px) {
+    #container > div {
+        float: right;
+        display: flex;
+    }
+    #container > h1 {
+        float: left;
+        width: 80%;
+    }
+
    .top {
         width: 80%;
     }
-    
+
+    #container {
+        flex-direction: column;
+    }
+
     .content {
         flex-wrap: wrap;
         justify-content: center;
@@ -272,31 +285,42 @@
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 30px;
-    }
-
-    .sidebar {
-        order: 2;
-        background-color: #ffffff; 
-        text-align: center;
-        width: 80%;
-        padding-left: 25px;
-        padding-right: 25px;
-        margin-top: 0px;
-        margin-bottom: 112px;
     }
   }
 
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 768px) {
+
+    #nameBox {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .top > form {
+        margin-left: auto;
+        margin-right: auto;
+    }
     
    .top {
         flex-wrap: wrap;
     }
     
-    #nameBox {
-        width: 100vw;
-        text-align: center;
+    #container > div {
+        float: right;
+        display: flex;
     }
-    
+    #container > h1 {
+        float: left;
+        width: 80%;
+    }
+
+   .top {
+        width: 80%;
+    }
+
+    #container {
+        flex-direction: column;
+    }
+
     .content {
         flex-wrap: wrap;
         justify-content: center;
@@ -310,22 +334,5 @@
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 30px;
-    }
-
-    .sidebar {
-        text-align: center;
-        width: 80%;
-        padding-left: 25px;
-        padding-right: 25px;
-        margin-bottom: 112px;
-    }
-
-    #subpageBox {
-        color: #ffffff;
-        display: flex;
-        margin-left: auto;
-        align-items: center;
-        margin-right: auto;
-        font-family: sans-serif;
     }
   }
