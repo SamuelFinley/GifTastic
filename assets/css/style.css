@@ -1,62 +1,41 @@
-.topic {
-    border-radius: 25px;
-    background-color: #444;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    padding-left: 5px;
-    padding-right: 5px;
-    font-weight: bold;
-    display: -webkit-flex;
-    flex-direction: row;
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    color: #dddddd;
-}
-.gifArea {
-    display: -webkit-flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-#topicB {
-    border: none;
-    cursor: pointer;
-    margin-left: 5px;
-    text-decoration: none;
-    text-align: center;
-    color: #dddddd;
-    margin: auto;
-    background-color: transparent;
-}
-
-#topicInput {
-    border-color: #67b6ff;
-    border-style: solid;
-    border-width: 2px;
-}
-
-.gif {
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: #333;
-    padding: 10px;
-    border-radius: 2%;
-    border-color: #67b6ff;
-    color: #dddddd;
-    border-style: solid;
-    border-width: 1px;
-}
-
-.topicArea {
-    display: -webkit-flex;
-    flex-direction: row;
-    justify-content: flex-start;
+.app {
+    background-image: url("../images/topography.png");
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-family: Georgia;
     width: 100vw;
-    flex-wrap: wrap;
 }
+
+.overlay {
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgba(0,0,0, 0.5);
+}
+
+.banner {
+    background-color: #67b6ff;
+    flex-wrap: wrap;
+
+}
+
+#banner2 {
+    background-color: #333;
+    box-shadow: 
+      0 0 10px rgba(0, 0, 0, 0.9);
+    border-bottom-style: groove;
+    border-bottom-color: #67b6ff;
+    border-bottom-width: 2px
+}
+
+.top {
+    margin-left: auto;
+    display: -webkit-flex;
+    margin-right: auto;
+    max-width: 960px;
+}
+
 #nameBox {
     font-size: 3em;
     color: #67b6ff;
@@ -81,51 +60,31 @@
       0 22px 30px rgba(0, 0, 0, 0.9);
 }
 
-#mainContent > h1 {
-    margin: auto;
-    font-weight: bold;
-    font-size: 3em;
+.top > form {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
     text-align: center;
-    background-color: #565656;
-    color: transparent;
-    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
-    text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.5);
-    -webkit-background-clip: text;
-     -moz-background-clip: text;
-          background-clip: text;
 }
-
-#mainContent, .sidebar {
+#topicInput {
+    border-color: #67b6ff;
     border-style: solid;
-    border-width: 1px;
-    border-color: #cccccc;
+    border-width: 2px;
 }
-#container {
-    position: relative;
-    background-color: black;
-    margin: auto;
-    padding: 20px;
-}
-#alt {
-    display: none;
-    position: absolute;
-    z-index: 1;
-    top: 0;
+.topicArea {
+    display: -webkit-flex;
+    flex-direction: row;
+    justify-content: flex-start;
     width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
+    flex-wrap: wrap;
 }
-#pic1 {
-    margin: auto;
-    background-color: black;
-}
-#close {
-    position: absolute;
-    right: 0;
-    top: 0;
-    background-color: transparent;
-    color: #dddddd;
-    border: none;
+.content {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 50vh;
+    display: -webkit-flex;
+    flex-direction: row;
 }
 #mainContent {
     width: 80vw;
@@ -137,146 +96,124 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 112px;
-}
-
-#mainContent form div {
-    display: -webkit-flex;
-    color: #777777;
-    flex-direction: column;
-    padding-bottom: 10px;
-    line-height: 2;
-}
-
-#bio, .banner, .sidebar > h1 {
-    border-bottom-style: solid;
-    border-bottom-width: 2px;
-    border-color: #67b6ff;
-}
-
-#bio {
-    color: #4aaaa5;
-    padding-bottom: 25px;
-    font-size: xx-large;
-    font-weight: bold;
-}
-
-#subpageBox {
-    color: #ffffff;
-    display: flex;
-    margin-left: auto;
-    align-items: center;
-    margin-right: -16px;
-    font-family: sans-serif;
-}
-
-#subpageBox a {
-    text-decoration: none;
-    padding: 16px;
-    color: #ffffff;
-}
-
-.gallery {
-    color: #777777;
-    display: -webkit-flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.gallery div {
-    margin: 25px;
-    position: relative;
-    z-index: 1;
-}
-
-#mainContent form {
-    padding-top: 25px;
-}
-
-#pic {
-    margin-top: 25px;
-    margin-right: 25px;
-    margin-bottom: 25px;
-    float: left;
-}
-
-.app {
-    background-image: url("../images/topography.png");
-    position: relative;
-    min-height: 100vh;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    font-family: Georgia;
-    width: 100vw;
-}
-
-#banner2 {
-    background-color: #333;
     box-shadow: 
-      0 0 10px rgba(0, 0, 0, 0.9);
+      0 0 10px rgba(0, 0, 0, 0.6);
 }
-.banner {
-    background-color: #67b6ff;
+
+#mainContent, .sidebar {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #cccccc;
+}
+
+#mainContent > h1 {
+    margin: auto;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+    background-color: #565656;
+    color: transparent;
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.5);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+}
+
+.gifArea {
+    display: -webkit-flex;
+    flex-direction: row;
     flex-wrap: wrap;
 }
 
-.top {
-    margin-left: auto;
-    display: -webkit-flex;
-    margin-right: auto;
-    max-width: 960px;
-}
-.top > form {
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: auto;
-    text-align: center;
-}
-.sidebar {
-    order: 2;
-    background-color: #ffffff; 
-    width: 270px;
-    flex: none;
-    text-align: center;
-    margin: auto;
-    margin-top: 0px;
-}
-
-.sidebar > h1 {
-    width: 220px;
-    margin: auto;
-    color: #4aaaa5;
-    font-size: large;
-    font-weight: bold;
-    padding-top: 25px;
-    padding-bottom: 25px;
-}
-
-.sidebar a {
-    margin: 10px;
-}
-
-.title, #atl {
-    position: absolute;
-    left: 0;
-    background-color: #4aaaa5;
-    color: #ffffff;
-    top: 60%;
+.footer {
     width: 100%;
+    position: absolute;
+    bottom: 0%;
+    padding: 20px;
+    padding-left: 0;
+    font-size: small;
     text-align: center;
-    font-size: large;
+    color: #67b6ff;
+    background-color: #333;
+    border-top-style: groove;
+    border-top-width: 10px;
+    border-color: #67b6ff;
+    box-shadow: 
+      0 0 10px rgba(0, 0, 0, 0.6);
+  }
+
+#alt {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#container {
+    position: relative;
+    background-color: black;
+    margin: auto;
+    padding: 20px;
+}
+
+#close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: transparent;
+    color: #dddddd;
+    border: none;
+}
+
+#pic1 {
+    margin: auto;
+    background-color: black;
+}
+
+.topic {
+    border-radius: 25px;
+    background-color: #444;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
     font-weight: bold;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    display: -webkit-flex;
+    flex-direction: row;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #dddddd;
 }
 
-#atl {
-    color:#80000A;
-    background-color: #A19060;
+#topicB {
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+    text-decoration: none;
+    text-align: center;
+    color: #dddddd;
+    margin: auto;
+    background-color: transparent;
 }
 
-.sidebar > div {
-    padding-top: 25px;
-    padding-bottom: 25px;
+.gif {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 2%;
+    border-color: #67b6ff;
+    color: #dddddd;
+    border-style: solid;
+    border-width: 1px;
 }
 
 #remove {
@@ -288,29 +225,6 @@
     background-color: transparent;
 }
 
-.content {
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    min-height: 80vh;
-    display: -webkit-flex;
-    flex-direction: row;
-}
-
-.footer {
-    width: 100%;
-    position: absolute;
-    bottom: 0%;
-    padding: 30px;
-    padding-left: 0;
-    font-size: small;
-    text-align: center;
-    color: #67b6ff;
-    background-color: #333;
-    border-top-style: solid;
-    border-top-width: 10px;
-    border-color: #67b6ff;
-  }
 
   /* Media queries */
 
